@@ -16,8 +16,8 @@ subreddit = reddit.subreddit('pythonforengineers')
 
 for submission in subreddit.hot(limit=10):
     if submission.id not in replied_to:
-        if re.search("i love python", submission.title, re.IGNORECASE):
-            submission.reply("beep boop this is a test reply i am a bot!")
+        if re.search("python", submission.title, re.IGNORECASE):
+            submission.reply("beep boop i am a bot, i see you love python, i love python too!!")
             print("bot replying to : ", submission.title)
             replied_to.append(submission.id)
 with open("replied_to.txt", "w") as f:
